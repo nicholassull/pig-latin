@@ -1,30 +1,24 @@
-// Business logic:
+// Business Logic
 
-function add(number1, number2) {
-  return number1 + number2;
-}
-
-function subtract(number1, number2) {
-  return number1 - number2;
-}
-
-function multiply(number1, number2) {
-  return number1 * number2;
-}
-
-function divide(number1, number2) {
-  return number1 / number2;
-}
-
-
-// Everything below this line is user interface logic:
-
-$(document).ready(function() {
-  $("form#add").submit(function(event) {
-    event.preventDefault();
-    const number1 = parseInt($("#add1").val());
-    const number2 = parseInt($("#add2").val());
-    const result = add(number1, number2);
-    $("#output").text(result);
+function pigLatin (text){
+  let vowelArray = ["a", "e", "i", "o", "u"];
+  let finalString = ""
+  textArray = text.split(" ");
+  textArray.forEach(function(word) {
+    var firstVowel=word.match(/[aeiou]/).join('');
+    var firstPosition=word.indexOf(firstVowel);
+    if (firstPosition === 0) {
+      finalString = finalString.concat(word+"way ");
+    } else if (/^qu/gi.test(word)) {
+      let newString = ""
+      const wordSlice = word.slice(2);
+      newString = newString.concat(wordSlice + "quay ");
+      finalString = finalString + newString;
+    } else {
+    let beginning = word.slice(firstPosition);
+    newStr =  word.substring(0, firstPosition);
+    finalString = finalString.concat(beginning + newStr +"ay ");
+    }
   });
-});
+  return finalString; 
+}
