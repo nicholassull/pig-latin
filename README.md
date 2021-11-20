@@ -60,15 +60,18 @@ Test: It will add "way" when first index is [aeiou]
 Code: pigLatin("away")
 Expected Output: awayway
 ```
+```
 Describe: pigLatin()
 Test: It will notify the first two letter "qu" and then sliced , then added "ay"
 Code: pigLatin(quit")
 Expected Output: itquay
-
+```
+```
 Describe: pigLatin()
 Test: It will look for vowel, look the index and use it for the substring to cut the word then add "ay." 
 Code: pigLatin(latin")
 Expected Output:atinlay 
+```
 
  
 
