@@ -6,11 +6,15 @@
 
 ## Technologies Used
 
-* __
+* _HTML_
+* _CSS_
+* _Bootstrap_
+* _Javascript_
+* _jQuery_
 
 ## Description
 
-__
+_This program will receive a string of text and output the equivalent sentance in Pig Latin._
 
 ### Expected Outputs
 * _pig latin => igpay atinlay_
